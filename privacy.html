@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - MindGlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-purple: #7C3AED;
+            --primary-blue: #3B82F6;
+            --dark: #1F2937;
+            --gray: #6B7280;
+            --light-gray: #F3F4F6;
+            --white: #FFFFFF;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.3);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: var(--light-gray);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-purple);
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .policy-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .policy-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1rem;
+            color: var(--primary-purple);
+        }
+
+        .policy-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .policy-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem;
+            color: var(--dark);
+        }
+
+        .policy-content p, .policy-content li {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .policy-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .policy-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(59, 130, 246, 0.1));
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary-purple);
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+            color: white;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        th {
+            font-weight: 700;
+        }
+
+        tbody tr:hover {
+            background: rgba(124, 58, 237, 0.05);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .contact-info {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 6rem 1rem 2rem;
+            }
+
+            .policy-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">MindGlow ✨</a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="header">
+            <h1>Privacy Policy</h1>
+            <p>Last Updated: November 3, 2025</p>
+        </div>
+
+        <div class="policy-content">
+            <h2>1. Introduction</h2>
+            <p>Welcome to MindGlow. Your privacy and trust are paramount to us. This Privacy Policy explains how MindGlow ("we," "our," or "us") collects, uses, stores, and protects your personal information when you use our iOS mobile application.</p>
+            <p>MindGlow is a mental wellness application designed to support your mental health journey through AI-powered conversations, mood tracking, task management, and evidence-based resources. We are deeply committed to protecting your sensitive personal and health information.</p>
+
+            <h2>2. Information We Collect</h2>
+
+            <h3>2.1 Information You Provide Directly</h3>
+            <ul>
+                <li><strong>Account Information:</strong> Email address, username, and authentication credentials when you create an account through Firebase Authentication</li>
+                <li><strong>Mood Data:</strong> Your mood ratings, emotional states, and related notes that you log in the app</li>
+                <li><strong>Task Information:</strong> Tasks you create, including titles, descriptions, priorities, deadlines, and completion status</li>
+                <li><strong>Assessment Responses:</strong> Your answers to mental health screening tools including PHQ-9 (depression), GAD-7 (anxiety), and PSS (stress) assessments</li>
+                <li><strong>AI Chat Conversations:</strong> Messages you send to Milo, our AI companion, including text content and conversation history</li>
+                <li><strong>Affirmation Preferences:</strong> Categories and types of affirmations you prefer or interact with</li>
+                <li><strong>Journal Entries:</strong> Any notes, reflections, or journal content you create within the app</li>
+            </ul>
+
+            <h3>2.2 Information Collected Automatically</h3>
+            <ul>
+                <li><strong>Device Information:</strong> iOS version, device model, app version, and unique device identifiers</li>
+                <li><strong>Usage Data:</strong> Features accessed, time spent in app, interaction patterns, and navigation paths</li>
+                <li><strong>Crash Reports:</strong> Technical diagnostics and error logs to improve app stability</li>
+                <li><strong>Subscription Data:</strong> Purchase history, subscription status, and payment information (processed through Apple's App Store and RevenueCat)</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3>🔒 What We DON'T Collect</h3>
+                <ul>
+                    <li>We do NOT collect your precise GPS location</li>
+                    <li>We do NOT access your contacts, photos, or other personal files without explicit permission</li>
+                    <li>We do NOT sell your personal data to third parties</li>
+                    <li>We do NOT use your health data for advertising purposes</li>
+                    <li>We do NOT share identifiable information with data brokers</li>
+                </ul>
+            </div>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the collected information for the following purposes:</p>
+            <ul>
+                <li><strong>Provide Core Services:</strong> Enable mood tracking, task management, AI conversations, and mental health assessments</li>
+                <li><strong>Personalization:</strong> Customize affirmations, insights, and recommendations based on your usage patterns</li>
+                <li><strong>AI Functionality:</strong> Process your chat messages with Milo using OpenAI's GPT models to provide supportive, empathetic responses</li>
+                <li><strong>Analytics & Improvement:</strong> Analyze aggregated, anonymized usage data to improve app features and user experience</li>
+                <li><strong>Account Management:</strong> Authenticate users, manage subscriptions, and provide customer support</li>
+                <li><strong>Security:</strong> Detect and prevent fraud, abuse, and technical issues</li>
+                <li><strong>Legal Compliance:</strong> Comply with applicable laws, regulations, and legal processes</li>
+            </ul>
+
+            <h2>4. Data Storage & Security</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Storage Location</th>
+                        <th>Encryption</th>
+                        <th>Retention</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>App Data (tasks, mood, assessments)</td>
+                        <td>On your iPhone (local storage)</td>
+                        <td>iOS data protection (encrypted at rest)</td>
+                        <td>Until you delete the app or manually clear data</td>
+                    </tr>
+                    <tr>
+                        <td>User Authentication</td>
+                        <td>Firebase (Google Cloud, USA)</td>
+                        <td>TLS/SSL encrypted in transit</td>
+                        <td>Until account deletion</td>
+                    </tr>
+                    <tr>
+                        <td>Milo AI Chat Messages</td>
+                        <td>OpenAI servers (USA)</td>
+                        <td>In-transit encryption</td>
+                        <td>Processed in real-time, not permanently stored by MindGlow</td>
+                    </tr>
+                    <tr>
+                        <td>Subscription Data</td>
+                        <td>RevenueCat (USA)</td>
+                        <td>Industry-standard encryption</td>
+                        <td>Per RevenueCat's retention policy</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Security Measures</h3>
+            <ul>
+                <li>All data transmitted between your device and our servers uses TLS/SSL encryption</li>
+                <li>Passwords are never stored in plain text; we use Firebase's secure authentication</li>
+                <li>Most sensitive data (mood logs, tasks, assessments) is stored locally on your device using iOS's encrypted storage</li>
+                <li>We implement industry-standard security practices including regular security audits</li>
+                <li>Access to backend systems is restricted to essential personnel only</li>
+            </ul>
+
+            <h2>5. Third-Party Services</h2>
+            <p>MindGlow integrates with the following third-party services to provide functionality:</p>
+
+            <h3>5.1 OpenAI (Milo AI Chat)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Powers the Milo AI companion feature using GPT models</li>
+                <li><strong>Data Shared:</strong> Chat messages you send to Milo are sent to OpenAI for processing</li>
+                <li><strong>Privacy:</strong> OpenAI's API does not use your data to train their models (as of our agreement)</li>
+                <li><strong>Policy:</strong> <a href="https://openai.com/policies/privacy-policy" target="_blank">OpenAI Privacy Policy</a></li>
+            </ul>
+
+            <h3>5.2 Firebase (Google)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> User authentication, cloud storage, and analytics</li>
+                <li><strong>Data Shared:</strong> Email, authentication tokens, usage analytics</li>
+                <li><strong>Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Privacy Policy</a></li>
+            </ul>
+
+            <h3>5.3 RevenueCat</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Subscription and in-app purchase management</li>
+                <li><strong>Data Shared:</strong> Purchase receipts, subscription status, anonymous user identifiers</li>
+                <li><strong>Policy:</strong> <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a></li>
+            </ul>
+
+            <h3>5.4 Apple App Store</h3>
+            <ul>
+                <li><strong>Purpose:</strong> App distribution and payment processing</li>
+                <li><strong>Data Shared:</strong> Determined by Apple's App Store policies</li>
+                <li><strong>Policy:</strong> <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></li>
+            </ul>
+
+            <h2>6. Your Privacy Rights</h2>
+            <p>Depending on your location, you may have the following rights:</p>
+
+            <h3>For All Users:</h3>
+            <ul>
+                <li><strong>Access:</strong> Request a copy of your personal data</li>
+                <li><strong>Correction:</strong> Update or correct inaccurate information</li>
+                <li><strong>Deletion:</strong> Request deletion of your account and associated data</li>
+                <li><strong>Data Portability:</strong> Receive your data in a machine-readable format</li>
+            </ul>
+
+            <h3>For EU/EEA Users (GDPR):</h3>
+            <ul>
+                <li>Right to object to processing</li>
+                <li>Right to restrict processing</li>
+                <li>Right to withdraw consent</li>
+                <li>Right to lodge a complaint with a supervisory authority</li>
+            </ul>
+
+            <h3>For California Users (CCPA):</h3>
+            <ul>
+                <li>Right to know what personal information is collected</li>
+                <li>Right to know if personal information is sold or disclosed</li>
+                <li>Right to opt-out of the sale of personal information (Note: We do NOT sell personal information)</li>
+                <li>Right to non-discrimination for exercising privacy rights</li>
+            </ul>
+
+            <p>To exercise any of these rights, please contact us at <a href="mailto:privacy@mindglow.app">privacy@mindglow.app</a></p>
+
+            <h2>7. Children's Privacy</h2>
+            <p>MindGlow is rated 17+ and is not intended for children under 17 years of age. We do not knowingly collect personal information from individuals under 17. If we discover that we have inadvertently collected information from someone under 17, we will delete it immediately.</p>
+            <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us at <a href="mailto:support@mindglow.app">support@mindglow.app</a></p>
+
+            <h2>8. Health Information Disclaimer</h2>
+            <div class="highlight-box">
+                <p><strong>⚠️ Important Medical Disclaimer</strong></p>
+                <p>MindGlow is NOT a substitute for professional medical advice, diagnosis, or treatment. The app is designed as a supportive tool for mental wellness and should not be used for medical emergencies or crisis situations.</p>
+                <ul>
+                    <li><strong>In case of emergency:</strong> Call 911 (USA) or your local emergency number</li>
+                    <li><strong>Suicide & Crisis Lifeline (USA):</strong> 988</li>
+                    <li><strong>Crisis Text Line (USA):</strong> Text HOME to 741741</li>
+                </ul>
+                <p>Always seek the advice of qualified healthcare providers with questions regarding medical or mental health conditions.</p>
+            </div>
+
+            <h2>9. Data Retention</h2>
+            <ul>
+                <li><strong>Local Data:</strong> Remains on your device until you delete the app or manually clear it</li>
+                <li><strong>Account Data:</strong> Retained until you request account deletion</li>
+                <li><strong>Chat Logs:</strong> AI conversations are processed in real-time and not permanently stored by us</li>
+                <li><strong>Analytics:</strong> Aggregated, anonymized usage data may be retained indefinitely for improvement purposes</li>
+                <li><strong>After Account Deletion:</strong> We will delete or anonymize your personal data within 30 days, except where retention is required by law</li>
+            </ul>
+
+            <h2>10. International Data Transfers</h2>
+            <p>MindGlow is operated from the United States. If you are located outside the United States, please be aware that information we collect (including through our third-party services) may be transferred to, stored, and processed in the United States and other countries.</p>
+            <p>By using MindGlow, you consent to the transfer of your information to countries outside your country of residence, which may have different data protection rules than your country.</p>
+            <p>For users in the EU/EEA, we ensure appropriate safeguards are in place for international transfers, including Standard Contractual Clauses approved by the European Commission.</p>
+
+            <h2>11. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will:</p>
+            <ul>
+                <li>Update the "Last Updated" date at the top of this policy</li>
+                <li>Notify you through the app or via email</li>
+                <li>Request your consent if required by applicable law</li>
+            </ul>
+            <p>We encourage you to review this Privacy Policy periodically. Your continued use of MindGlow after changes are posted constitutes your acceptance of the updated policy.</p>
+
+            <h2>12. Contact Us</h2>
+            <div class="contact-info">
+                <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:privacy@mindglow.app">privacy@mindglow.app</a></li>
+                    <li><strong>Support:</strong> <a href="mailto:support@mindglow.app">support@mindglow.app</a></li>
+                    <li><strong>Data Protection Officer:</strong> <a href="mailto:dpo@mindglow.app">dpo@mindglow.app</a></li>
+                </ul>
+                <p>We will respond to your inquiry within 30 days.</p>
+            </div>
+
+            <h2>13. Your Consent</h2>
+            <p>By using MindGlow, you acknowledge that you have read and understood this Privacy Policy and agree to its terms. If you do not agree with this policy, please do not use our app.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p><a href="index.html">Home</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+        <p>&copy; 2025 MindGlow. All rights reserved.</p>
+    </footer>
+</body>
+</html>

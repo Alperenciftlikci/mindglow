@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use - MindGlow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-purple: #7C3AED;
+            --primary-blue: #3B82F6;
+            --dark: #1F2937;
+            --gray: #6B7280;
+            --light-gray: #F3F4F6;
+            --white: #FFFFFF;
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --alert-bg: #FEF3C7;
+            --alert-border: #F59E0B;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: var(--light-gray);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-purple);
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8rem 2rem 4rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(59, 130, 246, 0.1));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 2px solid rgba(124, 58, 237, 0.3);
+            text-align: center;
+        }
+
+        .info-box h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-purple);
+        }
+
+        .info-box p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-blue));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+        }
+
+        .alert-box {
+            background: var(--alert-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--alert-border);
+        }
+
+        .alert-box strong {
+            color: var(--alert-border);
+            font-size: 1.2rem;
+        }
+
+        .alert-box ul {
+            margin-top: 1rem;
+            margin-left: 1.5rem;
+        }
+
+        .alert-box li {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .terms-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .terms-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1rem;
+            color: var(--primary-purple);
+        }
+
+        .terms-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .terms-content h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.8rem;
+            color: var(--dark);
+        }
+
+        .terms-content p, .terms-content li {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .terms-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .terms-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(59, 130, 246, 0.1));
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary-purple);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 6rem 1rem 2rem;
+            }
+
+            .terms-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .info-box, .alert-box {
+                padding: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 0.875rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">MindGlow ✨</a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="header">
+            <h1>Terms of Use</h1>
+            <p>Last Updated: November 3, 2025</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📱 Standard Apple Terms Apply</h3>
+            <p>MindGlow is licensed to you under Apple's standard End User License Agreement (EULA) for Licensed Applications. This agreement governs your use of the MindGlow app downloaded from the Apple App Store.</p>
+            <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" class="cta-button" target="_blank" rel="noopener noreferrer">
+                <span>📄</span>
+                <span>View Apple EULA</span>
+            </a>
+            <p style="margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.8;">The Apple EULA covers licensing, permitted uses, service rules, liability limitations, and termination conditions for all iOS applications.</p>
+        </div>
+
+        <div class="alert-box">
+            <p><strong>⚠️ Critical Medical Disclaimer - Emergency Resources</strong></p>
+            <p>MindGlow is NOT a crisis intervention service and should NOT be used in emergencies. If you are experiencing a mental health crisis or emergency:</p>
+            <ul>
+                <li>🆘 <strong>US Suicide & Crisis Lifeline:</strong> Call or text <strong>988</strong></li>
+                <li>🆘 <strong>US Crisis Text Line:</strong> Text <strong>HOME</strong> to <strong>741741</strong></li>
+                <li>🆘 <strong>Emergency Services:</strong> Call <strong>911</strong> (USA) or your local emergency number</li>
+                <li>🆘 <strong>International:</strong> Visit <a href="https://findahelpline.com" target="_blank" style="color: #F59E0B; font-weight: 700;">findahelpline.com</a> for crisis resources in your country</li>
+            </ul>
+        </div>
+
+        <div class="terms-content">
+            <h2>Additional MindGlow-Specific Terms</h2>
+            <p>In addition to Apple's standard EULA, the following terms apply specifically to your use of MindGlow:</p>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By downloading, installing, or using MindGlow, you agree to be bound by:</p>
+            <ul>
+                <li>Apple's standard End User License Agreement (EULA)</li>
+                <li>These additional MindGlow-specific terms</li>
+                <li>Our Privacy Policy (available at <a href="privacy.html">mindglow.app/privacy</a>)</li>
+            </ul>
+            <p>If you do not agree to these terms, do not use the MindGlow application.</p>
+
+            <h2>2. Medical Disclaimer & Limitations</h2>
+
+            <div class="highlight-box">
+                <h3>⚕️ Not Medical Advice</h3>
+                <p><strong>MindGlow is NOT a substitute for professional medical advice, diagnosis, or treatment.</strong> The app is designed as a supportive wellness tool and educational resource only.</p>
+            </div>
+
+            <h3>You acknowledge and agree that:</h3>
+            <ul>
+                <li>MindGlow does NOT provide medical, psychiatric, psychological, or therapeutic services</li>
+                <li>The app is NOT intended to diagnose, treat, cure, or prevent any disease or medical condition</li>
+                <li>Content provided through MindGlow is for informational and wellness purposes only</li>
+                <li>You should NOT disregard professional medical advice or delay seeking it because of something you read or experienced in MindGlow</li>
+                <li>Always consult a qualified healthcare provider for questions about medical or mental health conditions</li>
+                <li>MindGlow is NOT appropriate for crisis situations, suicidal ideation, or severe mental health emergencies</li>
+            </ul>
+
+            <h2>3. AI Companion (Milo) Limitations</h2>
+            <p>The Milo AI companion feature uses artificial intelligence technology (powered by OpenAI's GPT models) to provide conversational support. You understand and agree that:</p>
+            <ul>
+                <li><strong>Milo is an AI, not a human:</strong> Responses are generated by machine learning algorithms, not mental health professionals</li>
+                <li><strong>Not therapy:</strong> Conversations with Milo do not constitute therapy, counseling, or professional mental health treatment</li>
+                <li><strong>May be inaccurate:</strong> AI responses may contain errors, inaccuracies, or inappropriate suggestions</li>
+                <li><strong>Cannot replace professionals:</strong> Milo cannot provide the nuanced care, clinical judgment, or ethical oversight of licensed mental health professionals</li>
+                <li><strong>Not for emergencies:</strong> Never rely on Milo for crisis intervention or emergency mental health support</li>
+                <li><strong>Data processing:</strong> Your messages to Milo are processed by OpenAI's API (see our Privacy Policy)</li>
+            </ul>
+
+            <h2>4. Mental Health Assessments</h2>
+            <p>MindGlow includes standardized mental health screening tools (PHQ-9, GAD-7, PSS). These assessments:</p>
+            <ul>
+                <li>Are <strong>screening tools only</strong>, not diagnostic instruments</li>
+                <li>Should NOT be used as the sole basis for treatment decisions</li>
+                <li>Are NOT a substitute for professional clinical evaluation</li>
+                <li>May not be appropriate for all individuals or situations</li>
+                <li>Should be discussed with a qualified healthcare provider for proper interpretation</li>
+            </ul>
+            <p><strong>If your assessment results indicate moderate to severe symptoms, we strongly encourage you to seek professional help immediately.</strong></p>
+
+            <h2>5. Age Requirements</h2>
+            <p>MindGlow is rated <strong>17+</strong> and intended for users aged 17 and older. By using MindGlow, you represent that you are at least 17 years of age. We do not knowingly collect information from individuals under 17.</p>
+
+            <h2>6. Subscription & Payment Terms</h2>
+            <p>MindGlow offers a subscription-based premium service ("MindGlow Premium") with the following terms:</p>
+
+            <h3>6.1 Subscription Plans</h3>
+            <ul>
+                <li>Monthly subscription: Billed monthly until cancelled</li>
+                <li>Annual subscription: Billed annually until cancelled</li>
+                <li>Pricing is displayed in the app and may vary by region</li>
+            </ul>
+
+            <h3>6.2 Payment Processing</h3>
+            <ul>
+                <li>All purchases are processed through the Apple App Store</li>
+                <li>Payment will be charged to your Apple ID account at confirmation of purchase</li>
+                <li>Subscriptions automatically renew unless cancelled at least 24 hours before the end of the current period</li>
+                <li>Your account will be charged for renewal within 24 hours prior to the end of the current period</li>
+            </ul>
+
+            <h3>6.3 Free Trial</h3>
+            <ul>
+                <li>New subscribers may be offered a free trial period</li>
+                <li>If you do not cancel before the trial ends, you will be charged the subscription fee</li>
+                <li>Free trial eligibility is determined by Apple and may be limited to one per user</li>
+            </ul>
+
+            <h3>6.4 Cancellation</h3>
+            <ul>
+                <li>You can cancel your subscription anytime through your Apple ID settings</li>
+                <li>Cancellation takes effect at the end of the current billing period</li>
+                <li>No refunds for partial subscription periods</li>
+                <li>You will retain access to premium features until the end of your paid period</li>
+            </ul>
+
+            <h3>6.5 Refunds</h3>
+            <ul>
+                <li>Refund requests are handled by Apple according to their refund policy</li>
+                <li>To request a refund, contact Apple Support or visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a></li>
+                <li>We cannot process refunds directly as all transactions are handled by Apple</li>
+            </ul>
+
+            <h2>7. User Conduct & Prohibited Uses</h2>
+            <p>You agree NOT to use MindGlow to:</p>
+            <ul>
+                <li>Violate any laws or regulations</li>
+                <li>Harm, harass, threaten, or impersonate others</li>
+                <li>Upload malicious code, viruses, or harmful content</li>
+                <li>Attempt to reverse engineer, decompile, or hack the app</li>
+                <li>Circumvent subscription requirements or security features</li>
+                <li>Collect or harvest user data without authorization</li>
+                <li>Use the app for any commercial purpose without our written permission</li>
+                <li>Submit false or misleading information</li>
+            </ul>
+
+            <h2>8. Intellectual Property</h2>
+            <p>MindGlow and all content, features, and functionality (including but not limited to software, text, graphics, logos, icons, and images) are owned by MindGlow or its licensors and are protected by copyright, trademark, and other intellectual property laws.</p>
+            <p>You are granted a limited, non-exclusive, non-transferable license to use MindGlow for personal, non-commercial purposes in accordance with these Terms and Apple's EULA.</p>
+
+            <h2>9. Your Content & Data</h2>
+            <p>You retain ownership of any content you create or submit through MindGlow (mood logs, tasks, journal entries, etc.). By using the app, you grant us a limited license to process and store this content solely to provide app functionality.</p>
+            <p>You are responsible for:</p>
+            <ul>
+                <li>Maintaining the confidentiality of your account credentials</li>
+                <li>Backing up your data (we recommend regular backups)</li>
+                <li>All activity that occurs under your account</li>
+            </ul>
+
+            <h2>10. Data Privacy & Security</h2>
+            <p>Your privacy is important to us. Our collection, use, and protection of your personal information is governed by our <a href="privacy.html">Privacy Policy</a>, which is incorporated into these Terms by reference.</p>
+            <p>Key privacy points:</p>
+            <ul>
+                <li>Most data is stored locally on your device</li>
+                <li>We do NOT sell your personal data</li>
+                <li>We use industry-standard encryption</li>
+                <li>Third-party services (OpenAI, Firebase, RevenueCat) have their own privacy policies</li>
+            </ul>
+
+            <h2>11. Limitation of Liability</h2>
+            <p>To the maximum extent permitted by law:</p>
+            <ul>
+                <li>MindGlow is provided "AS IS" and "AS AVAILABLE" without warranties of any kind</li>
+                <li>We do NOT guarantee the app will be error-free, uninterrupted, or secure</li>
+                <li>We are NOT liable for any indirect, incidental, consequential, or punitive damages</li>
+                <li>We are NOT liable for any harm resulting from use or inability to use the app</li>
+                <li>We are NOT liable for decisions made based on app content or AI interactions</li>
+                <li>Total liability shall not exceed the amount you paid for the app in the past 12 months</li>
+            </ul>
+
+            <h2>12. Changes to Services</h2>
+            <p>We reserve the right to:</p>
+            <ul>
+                <li>Modify, suspend, or discontinue any feature or service at any time</li>
+                <li>Update these Terms with notice to users</li>
+                <li>Change subscription pricing with advance notice to existing subscribers</li>
+                <li>Terminate accounts that violate these Terms</li>
+            </ul>
+
+            <h2>13. Termination</h2>
+            <p>You may terminate your use of MindGlow at any time by:</p>
+            <ul>
+                <li>Deleting the app from your device</li>
+                <li>Cancelling your subscription through Apple</li>
+                <li>Requesting account deletion via <a href="mailto:support@mindglow.app">support@mindglow.app</a></li>
+            </ul>
+            <p>We may terminate or suspend your access if you violate these Terms, with or without notice.</p>
+
+            <h2>14. Governing Law</h2>
+            <p>These Terms are governed by the laws of the United States and the state in which MindGlow is registered, without regard to conflict of law principles. Any disputes shall be resolved in accordance with Apple's EULA dispute resolution provisions.</p>
+
+            <h2>15. Changes to These Terms</h2>
+            <p>We may update these Terms from time to time. When we make material changes:</p>
+            <ul>
+                <li>We will update the "Last Updated" date</li>
+                <li>We will notify you through the app or via email</li>
+                <li>Continued use after changes constitutes acceptance of the updated Terms</li>
+            </ul>
+
+            <h2>16. Contact Information</h2>
+            <p>For questions about these Terms, please contact us:</p>
+            <ul>
+                <li><strong>Support:</strong> <a href="mailto:support@mindglow.app">support@mindglow.app</a></li>
+                <li><strong>Legal:</strong> <a href="mailto:legal@mindglow.app">legal@mindglow.app</a></li>
+            </ul>
+
+            <h2>17. Severability</h2>
+            <p>If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited or eliminated to the minimum extent necessary, and the remaining provisions will remain in full force and effect.</p>
+
+            <h2>18. Entire Agreement</h2>
+            <p>These Terms, together with Apple's EULA and our Privacy Policy, constitute the entire agreement between you and MindGlow regarding the use of the app.</p>
+
+            <div class="highlight-box" style="margin-top: 3rem;">
+                <p><strong>By using MindGlow, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use and Apple's standard EULA.</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p><a href="index.html">Home</a> | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+        <p>&copy; 2025 MindGlow. All rights reserved.</p>
+    </footer>
+</body>
+</html>
